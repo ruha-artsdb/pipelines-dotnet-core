@@ -38,3 +38,9 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'ruha-artsdb'
+    appName: 'imsickofazure'
+    package: $(System.DefaultWorkingDirectory)/**/*.zip    
