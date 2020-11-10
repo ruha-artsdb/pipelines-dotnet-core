@@ -41,6 +41,6 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'ruha-artsdb'
+    azureSubscription: 'ruben.hansen@artsdatabanken.no'
     appName: 'imsickofazure'
     package: $(System.DefaultWorkingDirectory)/**/*.zip    
